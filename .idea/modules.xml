@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/foobarquix-back/foo-bar-quix.iml" filepath="$PROJECT_DIR$/foobarquix-back/foo-bar-quix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/foo-bar-quix-instruction.iml" filepath="$PROJECT_DIR$/.idea/foo-bar-quix-instruction.iml" />
+    </modules>
+  </component>
+</project>
