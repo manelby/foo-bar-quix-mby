@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -8,9 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FooBarQuixFormComponent implements OnInit {
   form: FormGroup;
+  @Output()
+  submitNumberOutput = new EventEmitter<number>();
 
 
-  constructor(private http: HttpClient, public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder) {
     this.createForm();
 
   }
@@ -25,9 +26,7 @@ export class FooBarQuixFormComponent implements OnInit {
   }
 
   submitNumber(): void {
-    let formData: FormData = new FormData();
-    formData.append("inputNumber", this.form.get('inputNumber').value);
-    console.log(this.form.value);
+    this.submitNumberOutput.emit(this.form.get('inputNumber').value);
   }
 
 }
