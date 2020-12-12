@@ -13,10 +13,10 @@ export class FooBarQuixFormComponent implements OnInit {
 
   constructor(public formBuilder: FormBuilder) {
     this.createForm();
-
   }
 
   createForm() {
+    //no need to create custom validator (input type is number)
     this.form = this.formBuilder.group({
       inputNumber: ['', Validators.required]
     });
